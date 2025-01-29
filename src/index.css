@@ -1,0 +1,20 @@
+
+ @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Jersey';
+  src: url('/fonts/Jersey25-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body{
+  background: #F5F6F7;
+  margin: 0;
+  padding: 0;
+  
+}
+#chart {
+  background-color: transparent !important;
+}
