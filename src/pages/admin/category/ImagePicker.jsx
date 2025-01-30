@@ -26,8 +26,8 @@ function ImagePicker({ image, setImage,editData }) {
         const height = img.height;
 
         // Check if dimensions match
-         if (width !== 1600 || height !== 1200) {
-           toast.error("Image dimensions must be 396x161 pixels.");
+         if (width !==64 || height !== 64) {
+           toast.error("Image dimensions must be 64x64 pixels.");
            return; // Exit function if the dimensions are incorrect
          }
 
@@ -73,8 +73,8 @@ function ImagePicker({ image, setImage,editData }) {
         const height = img.height;
 
         // Check if dimensions match
-        if (width !== 396 || height !== 161) {
-          toast.error("Image dimensions must be 396x161 pixels.");
+        if (width !==64 || height !== 64) {
+          toast.error("Image dimensions must be 64x64 pixels.");
           return; // Exit function if the dimensions are incorrect
         }
 
@@ -203,7 +203,7 @@ function ImagePicker({ image, setImage,editData }) {
                 </span>
               </h1>
               <p className="text-[#5D7186] text-[13px] mt-2">
-                1600 x 1200 (4:3) recommended. PNG, JPG
+                64W x 64H recommended. PNG, JPG
               </p>
             </div>
           </>

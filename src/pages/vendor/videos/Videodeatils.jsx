@@ -5,6 +5,7 @@ import { useDeleteVideo } from '../../../api/useDataController';
 
 function VideoDetails() {
   const data = useLocation().state?.data
+   const curancy = useLocation().state?.curancy;
   console.log(data);
   
     const navigate = useNavigate()
@@ -107,10 +108,10 @@ function VideoDetails() {
                     </h1>
                     <p className="opacity-50 text-[9px]">Emerson</p>
                     <p className="text-[14px] font-[600] text-buttonColor">
-                      INR {item?.price}
-                      {/* <span className="text-[#424242] text-[9px] line-through">
-                        AED 50
-                      </span> */}
+                      {curancy} {item?.price}
+                      <span className="text-[#424242] text-[9px] line-through">
+                       {' '}  {curancy} {item?.offerPrice}
+                      </span>
                     </p>
                   </div>
                 </div>

@@ -31,13 +31,13 @@ function ImagePicker({ formData, setFormData, prev, setPrev }) {
         //   setError("Image dimensions should be max 1920x1080");
         //   resolve(false);
         // } else
-        //     if (img.width !== 191 && img.height !== 298) {
-        //   setError("Image dimensions should be min 191x298");
-        //   resolve(false);
-        // } else {
+            if (img.width !== 191 && img.height !== 298) {
+          setError("Image dimensions should be min 191x298");
+          resolve(false);
+        } else {
         setError("");
         resolve(true);
-        // }
+        }
       };
     });
   };

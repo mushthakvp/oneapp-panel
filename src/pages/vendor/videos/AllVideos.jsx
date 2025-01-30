@@ -109,9 +109,9 @@ function AllVideos() {
               return (
                 <div key={index} className="relative rounded-md">
                   <div
-                    onClick={() =>
-                      navigate("/videoDetail", { state: { id: item?._id } })
-                    }
+                    // onClick={() =>
+                    //   navigate("/videoDetail", { state: { data: item} })
+                    // }
                     className="absolute top-0 bottom-0 left-0 w-full h-full z-10 rounded-md p-4 flex items-end"
                   >
                     <div className="relative w-full">
@@ -125,7 +125,7 @@ function AllVideos() {
                         <Buttons
                           navigate={() =>
                             navigate("/videoDetail", {
-                              state: { data: item },
+                              state: { data: item, curancy: data?.currency },
                             })
                           }
                           editNavigate={() =>
