@@ -162,7 +162,7 @@ function AddCategory() {
           <ImagePicker image={image} setImage={setImage} editData={editData}/>
           <div className="flex items-center">
             <div className="w-full max-[30%]">
-              Category name <span className="text-buttonColor">*</span>
+              Select Section <span className="text-buttonColor">*</span>
             </div>
             <div className="w-full min-w-[70%]">
               <Section selected={postData} setSelected={setPostData} />

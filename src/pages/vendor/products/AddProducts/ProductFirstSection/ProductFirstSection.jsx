@@ -54,7 +54,7 @@ function ProductFirstSection({
             onChange={(e) =>
               setProduct({ ...product, description: e.target.value })
             }
-            placeholder="Enter product Name"
+            placeholder="Enter description"
             className="w-full h-[72px] border border-inputBorder rounded-md p-3 bg-transparent outline-none"
           />
         </div>

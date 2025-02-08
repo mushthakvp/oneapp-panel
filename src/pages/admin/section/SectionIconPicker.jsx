@@ -94,21 +94,25 @@ function SectionIconPicker({postData,setPostData}) {
                 key={index}
                 onClick={() => {
                   setPostData({ ...postData, image: item });
-                  
                 }}
-                className="w-[50px] h-[50px] flex items-center justify-center cursor-pointer p-1 bg-[#F9F9F9] border border-inputBorder rounded-md"
+                className={`w-[50px] h-[50px] flex items-center justify-center cursor-pointer p-1 bg-[#F9F9F9] border ${
+                 postData?.image===item?'border-buttonColor': 'border - inputBorder'
+                } rounded-md`}
               >
                 <img src={item} alt="" className="w-[24px] h-[24px]" />
               </div>
             ))}
           </div>
-          <button onClick={() => {
-            if (postData?.image) {
-              setOpen(false);
-            } else {
-              toast.error("Please select icon");
-            }
-          }} className="w-full max-w-[365px] bg-buttonColor flex items-center justify-center text-white h-10 rounded-md md:h-12 mb-5">
+          <button
+            onClick={() => {
+              if (postData?.image) {
+                setOpen(false);
+              } else {
+                toast.error("Please select icon");
+              }
+            }}
+            className="w-full max-w-[365px] bg-buttonColor flex items-center justify-center text-white h-10 rounded-md md:h-12 mb-5"
+          >
             Submit
           </button>
         </div>
