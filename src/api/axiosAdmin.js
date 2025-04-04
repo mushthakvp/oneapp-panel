@@ -7,7 +7,7 @@ const customNavigate = (path) => {
 };
 
 // const BASE_URL = "http://localhost:8003/";
-const BASE_URL = "https://api.nexismarket.owpmf.tech/";
+const BASE_URL = "https://api.market.nexismetaverse.com/";
 
 //192.168.29.22
 export const api = axios.create({
