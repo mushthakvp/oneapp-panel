@@ -5,7 +5,7 @@ const customNavigate = (path) => {
   window.location.href = path;
 };
 
-export const BASE_URL = "https://api.nexismarket.owpmf.tech/";
+export const BASE_URL = "https://api.market.nexismetaverse.com/";
 // const BASE_URL = "http://localhost:8003/";
 
 //192.168.29.22
