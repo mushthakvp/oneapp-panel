@@ -7,7 +7,6 @@ const customNavigate = (path) => {
 
 export const BASE_URL = "https://api.nexismarket.owpmf.tech/";
 // const BASE_URL = "http://localhost:8003/";
-// const BASE_URL = "https://api.v-cart.livara.app/";
 
 //192.168.29.22
 export const api = axios.create({
@@ -52,15 +51,15 @@ const getAuthToken = () => localStorage.getItem("token");
 // const token = import.meta.env.VITE_REACT_APP_TOKEN
 
 export const apiService = {
-  async get(endpoint,  requiresAuth = true) {
+  async get(endpoint, requiresAuth = true) {
     try {
       const config = {
         // params,
-        headers: { Authorization: `Bearer ${getAuthToken()}`,country:'india' },
+        headers: { Authorization: `Bearer ${getAuthToken()}`, country: 'india' },
         // headers: { Authorization: "Bearer " + token }
       };
 
-     
+
       const response = await api.get(endpoint, requiresAuth ? config : null);
       return response.data;
     } catch (error) {
@@ -75,7 +74,7 @@ export const apiService = {
         headers: requiresAuth
           ? { Authorization: `Bearer ${getAuthToken()}`, country: "india" }
           : // ? { Authorization: "Bearer " + token }
-            {},
+          {},
       };
       const response = await api.post(endpoint, data, config);
       return response.data;
@@ -89,7 +88,7 @@ export const apiService = {
     try {
       const config = {
         headers: requiresAuth
-          ? { Authorization: `Bearer ${getAuthToken()}`,country: "india"  }
+          ? { Authorization: `Bearer ${getAuthToken()}`, country: "india" }
           : {},
       };
       const response = await api.put(endpoint, data, config);
@@ -104,7 +103,7 @@ export const apiService = {
     try {
       const config = {
         headers: requiresAuth
-          ? { Authorization: `Bearer ${getAuthToken()}`,country: "india"  }
+          ? { Authorization: `Bearer ${getAuthToken()}`, country: "india" }
           : {},
       };
       const response = await api.delete(endpoint, config);
