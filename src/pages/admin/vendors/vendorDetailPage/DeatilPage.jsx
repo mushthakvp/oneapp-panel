@@ -80,7 +80,7 @@ function DetailPage() {
               handleAction('unblock')
             }
             }
-            className="text-sm flex items-center justify-center p-2 h-[44px] bg-[#E31F1F] px-4 rounded-md text-white">
+            className="text-sm flex items-center justify-center p-2 h-[44px] bg-buttonColor px-4 rounded-md text-white">
             Unblock Vendor
           </button>
         )}
@@ -102,7 +102,7 @@ function DetailPage() {
               handleAction('block')
             }
             }
-            className="text-sm flex items-center justify-center p-2 h-[44px] bg-[#E31F1F] px-4 rounded-md text-white">
+            className="text-sm flex items-center justify-center p-2 h-[44px] bg-buttonColor px-4 rounded-md text-white">
             Block Vendor
           </button>
         )}
@@ -133,7 +133,7 @@ function DetailPage() {
                   handleAction('reject')
                 }
                 }
-                className="p-2 px-4 bg-[#E31F1F] rounded-md max-w-[246px] w-full text-white"
+                className="p-2 px-4 bg-buttonColor rounded-md max-w-[246px] w-full text-white"
               >
                 Reject
               </button>

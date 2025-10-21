@@ -5,8 +5,7 @@ const customNavigate = (path) => {
   window.location.href = path;
 };
 
-export const BASE_URL = "https://api.market.nexismetaverse.com/";
-// const BASE_URL = "http://localhost:8004/";
+export const BASE_URL = "https://api.kmams.in/";
 
 //192.168.29.22
 export const api = axios.create({
@@ -19,15 +18,6 @@ export const api = axios.create({
 
 const handleApiError = (error) => {
   if (error.response) {
-    console.error("Data:", error.response.data);
-    console.error("Status:", error.response.status);
-    console.error("Headers:", error.response.headers);
-
-    // if (error.response.data.message === 'Token expired' || error.response.data.message === 'Invalid token') {
-    //   localStorage.clear();
-    //   customNavigate("/auth");
-    // }
-
     if (error.response.data.message === 'Token expired' || error.response.data.message === 'Invalid token') {
       toast.error(error.response.data.message, {
         onClose: () => {

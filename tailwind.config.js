@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        buttonColor: "#2F4EFF",
+        buttonColor: "#1c1c84",
         inputBorder: "#ECEBE5",
-       nonActiveColor:'#2f4eff0f',
+       nonActiveColor:'#1c1c840f',
         naveBorder: "#EAEAEA",
         containerWhite: "#FFFFFF",
       },

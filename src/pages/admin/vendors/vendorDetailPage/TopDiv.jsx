@@ -395,8 +395,8 @@ function TopDiv({ vendor, status }) {
                 cx="15"
                 cy="15"
                 r="14.7"
-                fill="#2f4eff0f"
-                stroke="#2f4eff0f"
+                fill="#1c1c840f"
+                stroke="#1c1c840f"
                 stroke-width="0.6"
               />
               <path

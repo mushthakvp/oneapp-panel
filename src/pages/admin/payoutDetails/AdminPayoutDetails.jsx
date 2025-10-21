@@ -3,7 +3,6 @@ import PageHeading from '../../../components/pageHeding/PageHeading';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Pagination from '../../../components/pagination/PaginationTable';
 import TableShimmer from '../../../components/loading/shimmer/TableShimmer';
-import Third from '../../../assets/products/third.png';
 import { Modal, Box, Typography, Divider, Slide } from '@mui/material';
 import { useGetAmountDetails, useGetPayoutDetails } from '../../../api/useDataControllerAdmin';
 import { convertUTCToLocal } from '../../../utils/dateFormate';
@@ -85,7 +84,7 @@ const[status,setStatus]=useState();
                     state: { vendor: vendorData },
                   });
               }}
-              className="text-buttonColor border border-buttonColor px-4 py-2 rounded-md bg-[#2f4eff0f1A] text-[16px]"
+              className="text-buttonColor border border-buttonColor px-4 py-2 rounded-md bg-[#1c1c840f] text-[16px]"
             >
               See Vendor Details
             </button>

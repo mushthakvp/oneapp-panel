@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import product from "../../../../assets/dashboard/product.png";
+import React from 'react'
 import { Modal } from '@mui/material';
 import { useAddQuantity, useGetVendorDashProducts } from '../../../../api/useDataController';
 import { toast } from 'react-toastify';

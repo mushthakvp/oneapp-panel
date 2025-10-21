@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import third from "../../../../assets/products/third.png";
 import ReviewPagination from '../../../../components/pagination/ReviewPagination';
 import EmptyScreen from '../../products/EmptyProductsScreen';
 

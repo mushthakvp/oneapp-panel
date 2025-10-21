@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { openSidebar } from '../../../redux/feature/navBarSlice';
 import SideBarElement from './SideBarElement';
 import { useLocation } from 'react-router-dom';
-import { livaraLogo } from '../../../../public/svg';
+import { oneAppLogo } from '../../../../public/svg';
 
 function SideBar() {
   const location = useLocation().pathname;
@@ -76,7 +76,7 @@ function SideBar() {
       >
         {/* logo */}
         <div className="h-[80px] w-full flex items-center border-b border-b-naveBorder justify-center text-buttonColor text-[20px] sm:text-[27.41px] font-montserrat font-[400]">
-          <img src="/Nexus.svg" alt="" className="max-h-10 " />
+          <img src="/auth.svg" alt="" className="h-16 w-16" />
         </div>
 
         {/* logo */}

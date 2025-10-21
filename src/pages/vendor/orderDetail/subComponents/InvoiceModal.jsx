@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Box } from '@mui/material';
 import { Check } from 'lucide-react';
-import Logo from '../../../../assets/auth/logoLivera.png';
+import Logo from '../../../../assets/auth/appLogo.png';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 
@@ -36,7 +36,7 @@ const InvoiceModal = ({ isOpen, onClose, order }) => {
 
         doc.setFontSize(14); // Larger font size for company name
         doc.setTextColor(0, 0, 0); // Black color
-        doc.text('Livera', margin + 3, margin + 20); // Position text below logo
+        doc.text('OneApp', margin + 3, margin + 20); // Position text below logo
 
         // Header section
         doc.setFontSize(8);

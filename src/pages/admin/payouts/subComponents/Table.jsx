@@ -94,7 +94,7 @@ const Table = ({ selectedTab ,data, loading }) => {
                     {selectedTab === "Payouts" && (
                       <td className="px-2 pl-4">
                         <button
-                          className="bg-[#3C7CF5] text-white text-[12px] px-5 py-2 rounded-md hover:bg-blue-600 focus:outline-none"
+                          className="bg-buttonColor text-white text-[12px] px-5 py-2 rounded-md hover:bg-blue-600 focus:outline-none"
                           onClick={(event) => {
                             event.stopPropagation();
                               setPayIds({
@@ -205,16 +205,16 @@ const Table = ({ selectedTab ,data, loading }) => {
                       cx="51.5"
                       cy="51.5"
                       r="51.5"
-                      fill="#CE5D06"
+                      fill="#1c1c84"
                       fill-opacity="0.1"
                     />
                     <path
                       d="M52.4187 53.4334L48.6027 57.2494L41.0414 49.6174L44.8574 45.8014L48.6734 49.6174L58.1427 40.1481L61.9587 43.9641L52.4187 53.4334Z"
-                      fill="#CE5D06"
+                      fill="#1c1c84"
                     />
                     <path
                       d="M25 34V65.164H78V34H25ZM74.8907 55.836C71.428 55.836 68.672 58.592 68.672 62.0547H34.328C34.328 58.592 31.572 55.836 28.1093 55.836V43.3987C31.572 43.3987 34.328 40.6427 34.328 37.18H68.6013C68.6013 40.6427 71.3573 43.3987 74.82 43.3987V55.836H74.8907Z"
-                      fill="#CE5D06"
+                      fill="#1c1c84"
                     />
                   </svg>
 
@@ -226,7 +226,7 @@ const Table = ({ selectedTab ,data, loading }) => {
                 <div className="flex gap-4 w-full mt-4">
                   <button
                     onClick={handleCloseBankModal}
-                    className="flex-1 border border-[#CE5D06] text-[#CE5D06] py-2 rounded-md"
+                    className="flex-1 border border-buttonColor text-buttonColor py-2 rounded-md"
                   >
                     No
                   </button>
@@ -243,7 +243,7 @@ const Table = ({ selectedTab ,data, loading }) => {
                                             }
                                         })
                      }}
-                    className="flex-1 bg-[#CE5D06] text-white py-2 rounded-md hover:bg-[#d57744] transition"
+                    className="flex-1 bg-buttonColor text-white py-2 rounded-md hover:bg-[#1c1c84] transition"
                   >
                    {payPending?'Laoding....': "Yes"}
                   </button>

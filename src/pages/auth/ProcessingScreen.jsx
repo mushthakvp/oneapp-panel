@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import authBg from "../../assets/auth/SignIn.png";
+import authBg from "../../assets/auth/nxis.png";
 
 const ProcessingPage = () => {
     const navigate = useNavigate();

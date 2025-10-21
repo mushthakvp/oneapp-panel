@@ -1,23 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from "react-router-dom";
-import authBg from "../../assets/auth/SignIn.png";
+import authBg from "../../assets/auth/nxis.png";
 
-// const vendor = {
-//     rejectReasons: [
-//         {
-//             text: "The submitted documents were incomplete.",
-//             date: "2024-10-28T10:24:00Z",
-//         },
-//         {
-//             text: "The provided address could not be verified.",
-//             date: "2024-10-29T14:15:00Z",
-//         },
-//         {
-//             text: "The business name conflicts with an existing entity.",
-//             date: "2024-10-30T09:45:00Z",
-//         },
-//     ],
-// };
 
 const RejectedScreen = () => {
 

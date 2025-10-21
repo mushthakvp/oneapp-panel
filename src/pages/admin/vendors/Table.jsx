@@ -89,7 +89,7 @@ function Table({ data, status, isLoading }) {
                             e.stopPropagation();
                             handleAction('reject', item)}
                           }
-                          className="p-2 px-4 bg-[#E31F1F] rounded-md text-white"
+                          className="p-2 px-4 bg-buttonColor rounded-md text-white"
                         >
                           Reject
                         </button>
@@ -107,7 +107,7 @@ function Table({ data, status, isLoading }) {
                           e.stopPropagation();
                           handleAction('unblock', item)
                         }
-                      }} className="p-2 px-4 bg-[#E31F1F] rounded-md text-white">
+                      }} className="p-2 px-4 bg-buttonColor rounded-md text-white">
                         {status === "Approved" ? "Block" : "Unblock"}
                       </button>
                     )}

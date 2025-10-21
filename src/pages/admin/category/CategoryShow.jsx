@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import PageHeading from '../../../components/pageHeding/PageHeading'
-import category from '../../../assets/category/category.png'
 import { useNavigate } from 'react-router-dom';
 import { useAddAdminCategory, useGetCategory } from '../../../api/useDataControllerAdmin';
 import PageNation from '../../../components/pagenation/PageNation';

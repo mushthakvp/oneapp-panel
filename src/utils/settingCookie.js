@@ -1,5 +1,5 @@
  //const baseD = "localhost";
- const baseD = "liveraapp.com";
+ const baseD = "oneapp.com";
 export const getCookie = (name) => {
   const currentDomain = window.location.hostname;
   // if (currentDomain !== baseD) {

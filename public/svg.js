@@ -1,2 +1,2 @@
-import livaraLogo from "/LiveraLogo.svg";
-export {livaraLogo}
+import oneAppLogo from "/auth.svg";
+export {oneAppLogo}

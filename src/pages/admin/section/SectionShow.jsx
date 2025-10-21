@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import PageHeading from '../../../components/pageHeding/PageHeading';
-import category from '../../../assets/category/category.png';
 import { useAddAdminSection, useGetSection } from '../../../api/useDataControllerAdmin';
 import PageNation from '../../../components/pagenation/PageNation';
 import TableShimmer from '../../../components/loading/shimmer/TableShimmer';
@@ -127,7 +126,7 @@ function SectionShow() {
                                   cx="20"
                                   cy="20"
                                   r="20"
-                                  fill="#2f4eff0f"
+                                  fill="#1c1c840f"
                                   fill-opacity="1"
                                 />
                                 <path

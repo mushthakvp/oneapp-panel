@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import ProductFirstSection from './ProductFirstSection/ProductFirstSection'
 import SecondSection from './secondSection/SecondSection'
 import Variants from './productVarients/Variants'
-import third from "../../../../assets/products/third.png";
 import EstimatedSection from './EstimatedSection/EstimatedSection';
 import AddProductOverView from './AddProductOverView/AddProductOverView';
 import { uploadFile } from '../../../../api/cloudinary';

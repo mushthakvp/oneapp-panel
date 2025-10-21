@@ -6,8 +6,7 @@ const customNavigate = (path) => {
   window.location.href = path;
 };
 
-// const BASE_URL = "http://localhost:8003/";
-const BASE_URL = "https://api.market.nexismetaverse.com/";
+const BASE_URL = "https://api.kmams.in/";
 
 //192.168.29.22
 export const api = axios.create({
@@ -17,27 +16,7 @@ export const api = axios.create({
   },
 });
 const handleCheckCookie = () => {
-  // const currentToken = localStorage.getItem("token");
 
-  // const token = getCookie("token");
-  // if (!token) {
-  //   cookieLogout();
-  //   localStorage.clear();
-  //   customNavigate("/auth");
-  // } else if (currentToken !== token) {
-  //   localStorage.clear();
-   
-  //    const email = getCookie("email");
-  //    const name = getCookie("name");
-  //    const role = getCookie("role");
-  //    if (token && role === "admin") {
-  //      localStorage.setItem("token", token);
-  //      localStorage.setItem("role", role);
-  //      localStorage.setItem("mail", email);
-  //      localStorage.setItem("name", name);
-      
-  //    }
-  // }
 }
 const handleApiError = (error) => {
    

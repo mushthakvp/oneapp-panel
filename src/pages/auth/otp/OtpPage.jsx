@@ -1,11 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import authBg from "../../../assets/auth/SignIn.png";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useOtpVerification, useResendOtp } from "../../../api/useDataController";
 import { toast } from "react-toastify";
 import Spinner from '../../../components/loading/spinnerSmall';
 import { setUserDataCookie } from '../../../utils/settingCookie';
-import { livaraLogo } from '../../../../public/svg';
 import nxisBg from '../../../assets/auth/nxis.png'
 
 function OtpPage() {
@@ -140,7 +138,7 @@ function OtpPage() {
   return (
     <div className="relative font-urbanist">
       <div className="fixed z-10 left-0  right-0 bg-[#FFFFFFCC] pl-[20px] sm:pl-[40px] md:pl-[80px] top-0 border border-[#0000001A] flex items-center text-[#2f4eff0f] h-[65px] sm:h-[80px] text-[23px] sm:text-[32.53px] font-montserrat font-[400]">
-        <img src="/auth.svg" alt="" className="max-h-10 " />
+        <img src="/auth.svg" alt="" className="h-16 w-16" />
         {/* <p className="text-black ml-4">LIVARA</p> */}
       </div>
 
