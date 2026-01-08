@@ -21,14 +21,10 @@ export const validateVariant = (variant) => {
       if (
         !size.size ||
         !size.price ||
-        !size.quantity ||
-        !size.weight ||
-        !size.weightUnit
-      ) {
+        !size.quantity) {
         isValid = false;
         toast.error(
-          `Please fill in all the size fields (size, price, quantity, weight, weightUnit) for variant ${
-            i + 1
+          `Please fill in all the size fields (size, price, quantity,) for variant ${i + 1
           }, size ${j + 1}.`
         );
         break; // Exit inner loop as the validation has failed
@@ -50,7 +46,7 @@ export const validateVariant = (variant) => {
 };
 
 
-export  const validateProduct = (product) => {
+export const validateProduct = (product) => {
   let isValid = true;
 
   // Validate each field and show a specific toast if any field is empty
@@ -83,11 +79,11 @@ export  const validateProduct = (product) => {
     toast.error("Category is required!");
     return;
   }
-     if (!product.subCategory) {
-       isValid = false;
-       toast.error("Subcategory is required!");
-       return;
-     }
+  if (!product.subCategory) {
+    isValid = false;
+    toast.error("Subcategory is required!");
+    return;
+  }
 
   if (!product.states.length) {
     isValid = false;
@@ -97,7 +93,7 @@ export  const validateProduct = (product) => {
 
   return isValid; // Return whether all fields are valid
 };
-export  const validateSpecification = (specification) => {
+export const validateSpecification = (specification) => {
   let isValid = true;
 
   // Iterate over the specification array and check if each field is filled
@@ -118,7 +114,7 @@ export  const validateSpecification = (specification) => {
   return isValid; // Return whether all specifications are valid
 };
 
-export  const validateEstimated = (estimated) => {
+export const validateEstimated = (estimated) => {
   let isValid = true;
 
   // Check if isReturn is true and returnDuration is empty

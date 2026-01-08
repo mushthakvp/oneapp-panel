@@ -2,7 +2,7 @@
 
 // function SizeDrop({ selected, setSelected, index, sizeIndex }) {
 //     const [isOpen, setIsOpen] = React.useState(false);
-    
+
 //   return (
 //     <div className="flex justify-between  items-center h-12 gap-[8px] transition-all duration-700 ease-out">
 //       <div className="w-full relative border border-inputBorder rounded-md h-12 flex items-center justify-between px-3">
@@ -108,7 +108,7 @@
 //           </ul>
 //         </div>
 //       </div>
-      
+
 //     </div>
 //   );
 // }
@@ -154,21 +154,19 @@ function SizeDrop({ selected, setSelected, index, sizeIndex }) {
         <div className="flex gap-2">
           <button
             onClick={() => handleWeightUnitSelect('kg')}
-            className={`px-2 py-1 rounded ${
-              selected[index]?.sizes[sizeIndex]?.weightUnit === 'kg'
+            className={`px-2 py-1 rounded ${selected[index]?.sizes[sizeIndex]?.weightUnit === 'kg'
                 ? 'border border-buttonColor text-black bg-gray-100'
                 : 'bg-gray-100'
-            }`}
+              }`}
           >
             kg
           </button>
           <button
             onClick={() => handleWeightUnitSelect('g')}
-            className={`px-2 py-1 rounded ${
-              selected[index]?.sizes[sizeIndex]?.weightUnit === 'g'
+            className={`px-2 py-1 rounded ${selected[index]?.sizes[sizeIndex]?.weightUnit === 'g'
                 ? 'border border-buttonColor bg-gray-100'
                 : 'bg-gray-100'
-            }`}
+              }`}
           >
             g
           </button>

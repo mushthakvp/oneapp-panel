@@ -1,20 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react';
 import ColorDrp from '../dropDownSection/ColorDrp';
 import PlusMinusButton from '../PlusMinusButton';
-import SizeDrop from '../dropDownSection/SizeDrop';
 
 
 function Variants({ variant, variants, setVariants, index }) {
   const [getIndex, setGetIndex] = useState(index)
- 
-  
+
+
   const addSizes = () => {
     const newSize = {
       Size: "",
       prize: "",
       Quantity: "",
       OfferPrize: "",
-      Weight: "",
+      // Weight: "",
     };
 
     const updatedVariants = variants.map((v, i) => {
@@ -31,43 +30,43 @@ function Variants({ variant, variants, setVariants, index }) {
     setVariants(updatedVariants); // Update the state with the new variant list
 
   };
- 
-    const removeSizes = (sizeIndex) => {
-     const updatedVariants = variants.map((v, i) => {
-       if (i === index) {
-         // Preserve other properties and only update the sizes
-         return {
-           ...v,
-           sizes: variant?.sizes.filter((_, idx) => {
-             return idx !== sizeIndex;
-           }), // Remove the size at sizeIndex
-         };
-       }
 
-       return v;
-     });
+  const removeSizes = (sizeIndex) => {
+    const updatedVariants = variants.map((v, i) => {
+      if (i === index) {
+        // Preserve other properties and only update the sizes
+        return {
+          ...v,
+          sizes: variant?.sizes.filter((_, idx) => {
+            return idx !== sizeIndex;
+          }), // Remove the size at sizeIndex
+        };
+      }
 
-      setVariants(updatedVariants);
-    };
-  const handleFileChange = (event, imageIndex, variantIndex) => {
- 
-
-  const file = event.target.files[0]; // Get the first file (if any)
-  if (file) {
-    setVariants((prevVariants) => {
-      const updatedVariants = [...prevVariants]; // Create a copy of the variants array.
-
-
-      // Update the image at the correct getIndex and imagegetIndex.
-      updatedVariants[getIndex].images[imageIndex] = file;
-
-      // Return the updated variants.
-      return updatedVariants;
+      return v;
     });
-  }
-};
 
-  
+    setVariants(updatedVariants);
+  };
+  const handleFileChange = (event, imageIndex, variantIndex) => {
+
+
+    const file = event.target.files[0]; // Get the first file (if any)
+    if (file) {
+      setVariants((prevVariants) => {
+        const updatedVariants = [...prevVariants]; // Create a copy of the variants array.
+
+
+        // Update the image at the correct getIndex and imagegetIndex.
+        updatedVariants[getIndex].images[imageIndex] = file;
+
+        // Return the updated variants.
+        return updatedVariants;
+      });
+    }
+  };
+
+
   return (
     <div className="w-full font-urbanist">
       <div className="w-full ">
@@ -104,10 +103,9 @@ function Variants({ variant, variants, setVariants, index }) {
                       .getElementById(`file-input_Add-${imageIndex}-${index}`)
                       .click();
                   }}
-                  className={`${
-                    !objectURL &&
+                  className={`${!objectURL &&
                     "border-dashed border-2 border-dashed-[#DCDCDC]"
-                  } relative cursor-pointer  p-4 rounded-md flex flex-col items-center justify-center gap-4  min-h-[160px] overflow-hidden`}
+                    } relative cursor-pointer  p-4 rounded-md flex flex-col items-center justify-center gap-4  min-h-[160px] overflow-hidden`}
                 >
                   {image && (
                     <img
@@ -157,7 +155,7 @@ function Variants({ variant, variants, setVariants, index }) {
       </div>
       <div className="">
         {variant.sizes.map((size, sizeIndex) => {
-          
+
           return (
             <div
               key={sizeIndex}
@@ -246,7 +244,7 @@ function Variants({ variant, variants, setVariants, index }) {
                     className="w-full h-12 border border-inputBorder rounded-md px-3 bg-transparent outline-none"
                   />
                 </div>
-                <div className="w-full max-w-[214px]">
+                {/* <div className="w-full max-w-[214px]">
                   <p className="mb-[8px]">Weight</p>
                   <SizeDrop
                     index={index}
@@ -254,7 +252,7 @@ function Variants({ variant, variants, setVariants, index }) {
                     setSelected={setVariants}
                     sizeIndex={sizeIndex}
                   />
-                </div>
+                </div> */}
                 <PlusMinusButton
                   callBack={addSizes}
                   icon={
@@ -298,7 +296,8 @@ function Variants({ variant, variants, setVariants, index }) {
               </div>
               {/* Button to remove the size */}
             </div>
-          );})}
+          );
+        })}
       </div>
     </div>
   );
