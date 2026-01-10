@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 
-function ImagePicker({ image, setImage,editData }) {
+function ImagePicker({ image, setImage, editData }) {
   // To store the selected image file
   const [dragging, setDragging] = useState(false); // To manage drag-and-drop state
 
@@ -22,14 +22,14 @@ function ImagePicker({ image, setImage,editData }) {
 
       // Create an image to get its dimensions
       img.onload = () => {
-        const width = img.width;
-        const height = img.height;
+        // const width = img.width;
+        // const height = img.height;
 
-        // Check if dimensions match
-         if (width !==64 || height !== 64) {
-           toast.error("Image dimensions must be 64x64 pixels.");
-           return; // Exit function if the dimensions are incorrect
-         }
+        // // Check if dimensions match
+        // if (width !== 64 || height !== 64) {
+        //   toast.error("Image dimensions must be 64x64 pixels.");
+        //   return; // Exit function if the dimensions are incorrect
+        // }
 
         // If the file passes both checks, set the image
         setImage(file);
@@ -69,14 +69,14 @@ function ImagePicker({ image, setImage,editData }) {
 
       // Create an image to get its dimensions
       img.onload = () => {
-        const width = img.width;
-        const height = img.height;
+        // const width = img.width;
+        // const height = img.height;
 
-        // Check if dimensions match
-        if (width !==64 || height !== 64) {
-          toast.error("Image dimensions must be 64x64 pixels.");
-          return; // Exit function if the dimensions are incorrect
-        }
+        // // Check if dimensions match
+        // if (width !==64 || height !== 64) {
+        //   toast.error("Image dimensions must be 64x64 pixels.");
+        //   return; // Exit function if the dimensions are incorrect
+        // }
 
         // If the file passes both checks, set the image
         setImage(file);
@@ -93,9 +93,8 @@ function ImagePicker({ image, setImage,editData }) {
         Upload Image <span className="text-buttonColor">*</span>
       </div>
       <div
-        className={`w-full min-w-[70%] border-2 border-dashed relative ${
-          dragging ? "border-buttonColor" : "border-borderColor"
-        } bg-transparent rounded-md h-[252px] flex flex-col items-center justify-center gap-[30px] overflow-hidden`}
+        className={`w-full min-w-[70%] border-2 border-dashed relative ${dragging ? "border-buttonColor" : "border-borderColor"
+          } bg-transparent rounded-md h-[252px] flex flex-col items-center justify-center gap-[30px] overflow-hidden`}
         onDragOver={handleDragOver} // When dragging over the container
         onDragLeave={handleDragLeave} // When the dragged item leaves the container
         onDrop={handleDrop} // When the item is dropped into the container
